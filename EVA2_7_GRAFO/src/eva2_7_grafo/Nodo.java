@@ -1,0 +1,59 @@
+/*
+Santiago Morquecho Bañuelos #24550835
+21/09/2026
+ */
+package eva2_7_grafo;
+
+public class Nodo <T>{
+    // DOS ATRIBUTOS
+    private T valor; // Carga útil (información real a guardar)
+    private Nodo siguiente; // Gancho o referencia hacia el próximo nodo
+    private Nodo previo;
+    
+    // CONSTRUCTORES
+    public Nodo() {
+        this.siguiente = null; // ESTO ES MUY IMPORTANTE, MARCA EL FIN SEGURO DE LA LISTA
+        this.previo = null;
+    }
+    
+    /*
+     * Constructor con parámetros
+     *
+     * PRE: Recibe el dato entero que se desea almacenar
+     * POST: Se crea el nodo con la carga útil asignada y el puntero al siguiente en null
+     */
+    public Nodo(T valor) { 
+        this.valor = valor;
+        this.siguiente = null;
+        this.previo = null;
+    }
+    
+    // MÉTODOS GET Y SET
+
+    public T getValor() {
+        return valor;
+    }
+
+    public void setValor(T dato) {
+        this.valor = dato;
+    }
+
+    public Nodo getSiguiente() {
+        return siguiente;
+    }
+
+    public void setSiguiente(Nodo siguiente) {
+        this.siguiente = siguiente;
+    }
+
+    public Nodo getPrevio() {
+        return previo;
+    }
+
+    public void setPrevio(Nodo previo) {
+        this.previo = previo;
+    }
+    
+    
+    
+}
